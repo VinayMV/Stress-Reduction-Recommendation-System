@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmDown</title>
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;}
+    .hero{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: linear-gradient(rgba(74, 62, 129, 0.3),rgba(20, 5, 82, 0.3));
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 3%;
+    display: flex;
+    justify-content: space-between;
+}
+nav .logo{
+    width: 110px;
+    height: 50px;
+    margin-top: -7px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 15px;
+    
+} ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+nav ul li a:hover{
+    color: black;
+}
+body{
+    background-image: linear-gradient(#856D70,#54769a);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sub{
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+        <div class="hero">
+            <nav>
+                <a href="/"><img src="{{url_for('static', filename='calmdownlogo2.png')}}" class="logo" /></a>
+                <ul>
+                    <li><a href="/"><b>HOME</b></a></li>
+                    <li><a href="/about"><b>ABOUT</b></a></li>
+                    <li><a href="/help"><b>HELP</b></a></li>
+                </ul>
+            </nav>
+            <form action="/submit" method='post'>
+            <br><br><br><br><br>
+            
+              <h2 style="font-style:italic">Congrats! You are one step closer to being stress free !!!</h2><br>
+              <h5 style="font-style:italic">*Do fill out these few questions so that we can provide you with personalised recommendations*</h5><br>
+              <p>On a scale of 0 to 5, rate the following events or circumstances that may have caused your stress, and your ability to cope with stress. 0 - Never, 1 - Almost never, 2 - Sometimes, 3 - Fairly Often, 4 - Very often</p>
+              <br>
+              <p>In the last month, how often have you been upset because of something that happened unexpectedly?</p>
+              
+              <input type="radio" id="val1" name="val0" value="0">
+              <label for="val0">0</label><br>
+              <input type="radio" id="val2" name="val0" value="1">
+              <label for="val1">1</label><br>
+              <input type="radio" id="val3" name="val0" value="2">
+              <label for="val2">2</label><br> 
+              <input type="radio" id="val4" name="val0" value="3">
+              <label for="val3">3</label><br>
+              <input type="radio" id="val5" name="val0" value="4">
+              <label for="val4">4</label><br> 
+               <br>
+            
+              <p>In the last month, how often have you felt that you were unable to control the important things in your life?</p>
+              <input type="radio" id="val1" name="val1" value="0">
+              <label for="val0">0</label><br>
+              <input type="radio" id="val2" name="val1" value="1">
+              <label for="val1">1</label><br>
+              <input type="radio" id="val3" name="val1" value="2">
+              <label for="val2">2</label><br> 
+              <input type="radio" id="val4" name="val1" value="3">
+              <label for="val3">3</label><br>
+              <input type="radio" id="val5" name="val1" value="4">
+              <label for="val4">4</label><br> 
+              <!--<input type="radio" id="val6" name="val0" value="5">
+              <label for="val5">5</label><br>-->
+              
+              <br>
+            
+              <p>In the last month, how often have you felt nervous and stressed?</p>
+              <input type="radio" id="val1" name="val2" value="0">
+              <label for="val0">0</label><br>
+              <input type="radio" id="val2" name="val2" value="1">
+              <label for="val1">1</label><br>
+              <input type="radio" id="val3" name="val2" value="2">
+              <label for="val2">2</label><br> 
+              <input type="radio" id="val4" name="val2" value="3">
+              <label for="val3">3</label><br>
+              <input type="radio" id="val5" name="val2" value="4">
+              <label for="val4">4</label><br> 
+              <!--<input type="radio" id="val6" name="val0" value="5">
+              <label for="val5">5</label><br>-->
+              
+              <br>
+              <p>In the last month, how often have you found that you could not cope with all the things that you had to do?</p>
+              <input type="radio" id="val1" name="val3" value="0">
+              <label for="val0">0</label><br>
+              <input type="radio" id="val2" name="val3" value="1">
+              <label for="val1">1</label><br>
+              <input type="radio" id="val3" name="val3" value="2">
+              <label for="val2">2</label><br> 
+              <input type="radio" id="val4" name="val3" value="3">
+              <label for="val3">3</label><br>
+              <input type="radio" id="val5" name="val3" value="4">
+              <label for="val4">4</label><br> 
+              <!--<input type="radio" id="val6" name="val0" value="5">
+              <label for="val5">5</label><br>-->
+              
+              <br>
+              <p>In the last month, how often have you been angered because of things that happened that were outside of your control?</p>
+              <input type="radio" id="val1" name="val4" value="0">
+              <label for="val0">0</label><br>
+              <input type="radio" id="val2" name="val4" value="1">
+              <label for="val1">1</label><br>
+              <input type="radio" id="val3" name="val4" value="2">
+              <label for="val2">2</label><br> 
+              <input type="radio" id="val4" name="val4" value="3">
+              <label for="val3">3</label><br>
+              <input type="radio" id="val5" name="val4" value="4">
+              <label for="val4">4</label><br> 
+              <!--<input type="radio" id="val6" name="val0" value="5">
+              <label for="val5">5</label><br>-->
+            
+              <br>
+              <p> In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?</p>
+              <input type="radio" id="val1" name="val5" value="0">
+              <label for="val0">0</label><br>
+              <input type="radio" id="val2" name="val5" value="1">
+              <label for="val1">1</label><br>
+              <input type="radio" id="val3" name="val5" value="2">
+              <label for="val2">2</label><br> 
+              <input type="radio" id="val4" name="val5" value="3">
+              <label for="val3">3</label><br>
+              <input type="radio" id="val5" name="val5" value="4">
+              <label for="val4">4</label><br> 
+              <!--<input type="radio" id="val6" name="val0" value="5">
+              <label for="val5">5</label><br>-->
+            
+              <br>
+              <p>  In the last month, how often have you felt confident about your ability to handle your personal problems?</p>
+              <input type="radio" id="val1" name="val6" value="0">
+              <label for="val0">0</label><br>
+              <input type="radio" id="val2" name="val6" value="1">
+              <label for="val1">1</label><br>
+              <input type="radio" id="val3" name="val6" value="2">
+              <label for="val2">2</label><br> 
+              <input type="radio" id="val4" name="val6" value="3">
+              <label for="val3">3</label><br>
+              <input type="radio" id="val5" name="val6" value="4">
+              <label for="val4">4</label><br> 
+              <!--<input type="radio" id="val6" name="val0" value="5">
+              <label for="val5">5</label><br>-->
+            
+              <br>
+              <p> In the last month, how often have you felt that things were going your way?</p>
+              <input type="radio" id="val1" name="val7" value="0">
+              <label for="val0">0</label><br>
+              <input type="radio" id="val2" name="val7" value="1">
+              <label for="val1">1</label><br>
+              <input type="radio" id="val3" name="val7" value="2">
+              <label for="val2">2</label><br> 
+              <input type="radio" id="val4" name="val7" value="3">
+              <label for="val3">3</label><br>
+              <input type="radio" id="val5" name="val7" value="4">
+              <label for="val4">4</label><br> 
+              <!--<input type="radio" id="val6" name="val0" value="5">
+              <label for="val5">5</label><br>-->
+            
+              <br>
+              <p>In the last month, how often have you been able to control irritations in your life?</p>
+              <input type="radio" id="val1" name="val8" value="0">
+              <label for="val0">0</label><br>
+              <input type="radio" id="val2" name="val8" value="1">
+              <label for="val1">1</label><br>
+              <input type="radio" id="val3" name="val8" value="2">
+              <label for="val2">2</label><br> 
+              <input type="radio" id="val4" name="val8" value="3">
+              <label for="val3">3</label><br>
+              <input type="radio" id="val5" name="val8" value="4">
+              <label for="val4">4</label><br> 
+              <!--<input type="radio" id="val6" name="val0" value="5">
+              <label for="val5">5</label><br>-->
+            
+              <br>
+              <p>In the last month, how often have you felt that you were on top of things?</p>
+              <input type="radio" id="val1" name="val9" value="0">
+              <label for="val0">0</label><br>
+              <input type="radio" id="val2" name="val9" value="1">
+              <label for="val1">1</label><br>
+              <input type="radio" id="val3" name="val9" value="2">
+              <label for="val2">2</label><br> 
+              <input type="radio" id="val4" name="val9" value="3">
+              <label for="val3">3</label><br>
+              <input type="radio" id="val5" name="val9" value="4">
+              <label for="val4">4</label><br> 
+              <!--<input type="radio" id="val6" name="val0" value="5">
+              <label for="val5">5</label><br>-->
+            
+              <br><br>
+                <div class="sub">
+                  <input type="submit" value="Submit">
+                </div>
+                <br>
+            </form>
+        </div>
+</body>
+</html>

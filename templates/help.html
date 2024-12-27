@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmDown</title>
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;}
+    .hero{
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(#856D70,#324B66);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 3%;
+    display: flex;
+    justify-content: space-between;
+}
+nav .logo{
+    width: 110px;
+    height: 50px;
+    margin-top: -7px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 15px;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+nav ul li a:hover{
+    color: black;
+}
+.content{
+    text-align: center;
+}
+.content h1{
+    font-size: 50px;
+    color: #fff;  
+    font-weight: 450;
+    transition: 0.5s;
+}
+.content h1:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+.content h2{
+    font-size: 40px;
+    color: #fff;  
+    font-weight: 450;
+    transition: 0.5s;
+}
+.content h2:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+.imagelinks{
+    width: 100%;
+    height: 17vh;
+    background-color: #f1f2f6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.imagelinks h1{
+    margin-top: 37px;
+    color: #5287b0;
+}
+.helpline{
+    width: 100%;
+    height: 17vh;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.helpline h1{
+    margin-top: 37px;
+    color: #5287b0;
+}
+.helplinks{
+    width: 100%;
+    height: 43vh;
+    background-color: #f1f2f6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.helplinks a{
+    justify-content: space-evenly;
+}
+.number{
+    width: 100%;
+    height: 43vh;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.number h5{
+    color: #5287b0;
+}
+    </style>
+</head>
+<body>
+        <div class="hero">
+            <nav>
+                <a href="/"><img src="{{url_for('static', filename='calmdownlogo2.png')}}" class="logo" /></a>
+                <ul>
+                    <li><a href="/"><b>HOME</b></a></li>
+                    <li><a href="/about"><b>ABOUT</b></a></li>
+                    <li><a href="/help"><b>HELP</b></a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <h1>NEED HELP ?</h1>
+                <h2>DON'T WORRY WE GOT YOU COVERED !!</h2>
+            </div>
+        </div>
+        <div class="imagelinks">
+            <h1>SUGGESTED ARTICLES</h1>
+        </div>
+            <div class="helplinks">
+                <div class="helppara">
+                    <a href="https://www.who.int/health-topics/mental-health#tab=tab_1">
+                        <img alt="who" src="{{url_for('static', filename='logo-who.tmb-1200v.jpg')}}"
+                        width="150" height="100">
+                     </a>
+                     <a href="https://www.health.harvard.edu/mind-and-mood/protect-your-brain-from-stress">
+                       <img alt="harvard" src="{{url_for('static', filename='help image.jpg')}}"
+                       width="150" height="100">
+                    </a>
+                    <a href="https://burrelles.com/mental-health-awareness-month-2021-what-you-need-to-know/">
+                       <img alt="burrelles" src="{{url_for('static', filename='yana2020-mhm-Facebook-post.png')}}"
+                       width="150" height="100">
+                    </a>
+                </div>
+            </div>
+            <div class="helpline">
+                <h1>HELPLINE</h1>
+            </div>
+            <div class="number">
+                <div class="phno">
+                    <p>"You are allowed to feel messed up and inside out. It doesn't mean you're defective,it just means you're human" – David Mitchell, Cloud Atlas</p>
+                    <br>
+                    <br>
+                    <h5><b>Disclaimer:</b> CalmDown does not own, operate or control the helpline numbers listed on the website. The helpline numbers are listed for referral purposes only, and CalmDown does not make any recommendations or guarantees regarding the quality of response and medical advice you might receive from any of the helplines.</h5>
+                    <br>
+                    <br>
+                    <p><b>Toll-free Helpline Number: 1056</b></p>
+                </div>
+            </div>
+            
+</body>
+</html>
